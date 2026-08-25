@@ -384,6 +384,13 @@
             margin-bottom: 8px;
             min-height: 40px;
             line-height: 1.4;
+            font-weight: 600;
+        }
+
+        .product-seller {
+            font-size: 11px;
+            color: #0066cc;
+            margin-bottom: 6px;
         }
 
         .product-rating {
@@ -477,7 +484,7 @@
 
         .sellers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
 
@@ -492,6 +499,7 @@
 
         .seller-card:hover {
             box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
         }
 
         .seller-badge {
@@ -509,6 +517,13 @@
         .seller-name {
             font-weight: bold;
             color: #131921;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .seller-info {
+            font-size: 11px;
+            color: #666;
             margin-bottom: 8px;
         }
 
@@ -516,6 +531,7 @@
             font-size: 12px;
             color: #666;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .seller-visit-btn {
@@ -719,7 +735,7 @@
         <div class="carousel">
             <div class="carousel-content">
                 <h1>Welcome to Avikate</h1>
-                <p>Shop millions of products from verified sellers</p>
+                <p>Shop millions of products from verified sellers worldwide</p>
                 <button class="carousel-btn" onclick="location.href='products.html'">Start Shopping →</button>
             </div>
         </div>
@@ -778,120 +794,137 @@
             <a href="products.html" class="see-all">See All Deals →</a>
         </div>
         <div class="products-grid">
+            <!-- REAL PRODUCT: Apple iPhone 15 Pro Max -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">📱</div>
                 <div class="product-info">
                     <div class="product-prime">Prime</div>
-                    <div class="product-name">Premium Smartphone Pro Max 2026</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (2,450 reviews)</div>
+                    <div class="product-name">Apple iPhone 15 Pro Max 256GB</div>
+                    <div class="product-seller">by Apple Direct Store</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (12,450 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$899</span>
-                        <span class="product-discount">-35%</span>
+                        <span class="product-original-price">$1,199</span>
+                        <span class="product-discount">-15%</span>
                     </div>
-                    <div class="product-price">$584.35</div>
+                    <div class="product-price">$1,019</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Samsung Galaxy Watch -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">⌚</div>
                 <div class="product-info">
                     <div class="product-prime">Prime</div>
-                    <div class="product-name">Smart Watch Ultra</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (1,823 reviews)</div>
+                    <div class="product-name">Samsung Galaxy Watch 6 Classic</div>
+                    <div class="product-seller">by Samsung Electronics</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (8,823 reviews)</div>
                     <div style="margin-bottom: 8px;">
                         <span class="product-original-price">$399</span>
-                        <span class="product-discount">-45%</span>
+                        <span class="product-discount">-32%</span>
                     </div>
-                    <div class="product-price">$219.45</div>
+                    <div class="product-price">$271</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Sony WH-1000XM5 Headphones -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">🎧</div>
                 <div class="product-info">
                     <div class="product-prime">Prime</div>
-                    <div class="product-name">Wireless Earbuds Pro</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (3,120 reviews)</div>
+                    <div class="product-name">Sony WH-1000XM5 Wireless Headphones</div>
+                    <div class="product-seller">by Sony Audio Direct</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (15,120 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$199</span>
-                        <span class="product-discount">-52%</span>
+                        <span class="product-original-price">$399</span>
+                        <span class="product-discount">-28%</span>
                     </div>
-                    <div class="product-price">$95.52</div>
+                    <div class="product-price">$287</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Dell XPS 13 Laptop -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">💻</div>
                 <div class="product-info">
                     <div class="product-prime">Prime</div>
-                    <div class="product-name">Laptop 16GB RAM SSD</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (987 reviews)</div>
+                    <div class="product-name">Dell XPS 13 Laptop (FHD, Intel i7)</div>
+                    <div class="product-seller">by Dell Technologies Store</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (9,987 reviews)</div>
                     <div style="margin-bottom: 8px;">
                         <span class="product-original-price">$1,299</span>
-                        <span class="product-discount">-28%</span>
+                        <span class="product-discount">-20%</span>
                     </div>
-                    <div class="product-price">$935.28</div>
+                    <div class="product-price">$1,039</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Nike Air Max 90 -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">👟</div>
                 <div class="product-info">
-                    <div class="product-name">Running Shoes Pro</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (2,654 reviews)</div>
+                    <div class="product-name">Nike Air Max 90 Men's Shoes</div>
+                    <div class="product-seller">by Nike Official Store</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (22,654 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$150</span>
-                        <span class="product-discount">-40%</span>
+                        <span class="product-original-price">$130</span>
+                        <span class="product-discount">-23%</span>
                     </div>
-                    <div class="product-price">$89.99</div>
+                    <div class="product-price">$99.99</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Canon EOS R6 Camera -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">📷</div>
                 <div class="product-info">
                     <div class="product-prime">Prime</div>
-                    <div class="product-name">4K Digital Camera</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (1,456 reviews)</div>
+                    <div class="product-name">Canon EOS R6 Mirrorless Camera Body</div>
+                    <div class="product-seller">by Canon Professional Store</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (5,456 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$799</span>
-                        <span class="product-discount">-33%</span>
+                        <span class="product-original-price">$2,499</span>
+                        <span class="product-discount">-12%</span>
                     </div>
-                    <div class="product-price">$533.33</div>
+                    <div class="product-price">$2,199</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: DJI Air 3S Drone -->
             <div class="product-card" onclick="location.href='products.html'">
-                <div class="product-image">🛏️</div>
+                <div class="product-image">🚁</div>
                 <div class="product-info">
-                    <div class="product-name">Premium Bedding Set</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (892 reviews)</div>
+                    <div class="product-prime">Prime</div>
+                    <div class="product-name">DJI Air 3S Drone with Fly More Combo</div>
+                    <div class="product-seller">by DJI Official Store</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (7,892 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$120</span>
-                        <span class="product-discount">-50%</span>
+                        <span class="product-original-price">$1,199</span>
+                        <span class="product-discount">-18%</span>
                     </div>
-                    <div class="product-price">$59.99</div>
+                    <div class="product-price">$983</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: PlayStation 5 Console -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">🎮</div>
                 <div class="product-info">
                     <div class="product-prime">Prime</div>
-                    <div class="product-name">Gaming Console</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (5,234 reviews)</div>
+                    <div class="product-name">PlayStation 5 Console (Disc Edition)</div>
+                    <div class="product-seller">by Sony PlayStation Store</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (35,234 reviews)</div>
                     <div style="margin-bottom: 8px;">
                         <span class="product-original-price">$499</span>
-                        <span class="product-discount">-20%</span>
+                        <span class="product-discount">-10%</span>
                     </div>
-                    <div class="product-price">$399.20</div>
+                    <div class="product-price">$449</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
@@ -905,58 +938,66 @@
             <span class="timer">Ends in: 08:45:32</span>
         </h2>
         <div class="products-grid">
+            <!-- REAL PRODUCT: Levi's Jeans -->
             <div class="product-card" onclick="location.href='products.html'">
-                <div class="product-image">🧥</div>
+                <div class="product-image">👖</div>
                 <div class="product-info">
-                    <div class="product-name">Winter Jacket Premium</div>
-                    <div class="product-rating">⭐⭐⭐⭐ (456 reviews)</div>
+                    <div class="product-name">Levi's 501 Classic Blue Jeans</div>
+                    <div class="product-seller">by Levi Strauss & Co</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (18,456 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$250</span>
-                        <span class="product-discount">-60%</span>
+                        <span class="product-original-price">$98</span>
+                        <span class="product-discount">-45%</span>
                     </div>
-                    <div class="product-price">$99.99</div>
+                    <div class="product-price">$53.99</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Louis Vuitton Bag -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">👜</div>
                 <div class="product-info">
-                    <div class="product-name">Designer Handbag</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (1,234 reviews)</div>
+                    <div class="product-name">Louis Vuitton Speedy Monogram Bag</div>
+                    <div class="product-seller">by LV Luxury Boutique</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (9,234 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$400</span>
-                        <span class="product-discount">-55%</span>
+                        <span class="product-original-price">$1,100</span>
+                        <span class="product-discount">-22%</span>
                     </div>
-                    <div class="product-price">$179.99</div>
+                    <div class="product-price">$859</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Rolex Watch -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">⌛</div>
                 <div class="product-info">
-                    <div class="product-name">Luxury Wristwatch</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (2,123 reviews)</div>
+                    <div class="product-name">Rolex Submariner Stainless Steel</div>
+                    <div class="product-seller">by Rolex Authorized Dealer</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (6,123 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$600</span>
-                        <span class="product-discount">-65%</span>
+                        <span class="product-original-price">$9,100</span>
+                        <span class="product-discount">-8%</span>
                     </div>
-                    <div class="product-price">$209.99</div>
+                    <div class="product-price">$8,372</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- REAL PRODUCT: Beats Studio Pro Headphones -->
             <div class="product-card" onclick="location.href='products.html'">
                 <div class="product-image">🎧</div>
                 <div class="product-info">
-                    <div class="product-name">Studio Headphones</div>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (3,456 reviews)</div>
+                    <div class="product-name">Beats Studio Pro Wireless Headphones</div>
+                    <div class="product-seller">by Beats by Dre Store</div>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (14,456 reviews)</div>
                     <div style="margin-bottom: 8px;">
-                        <span class="product-original-price">$350</span>
-                        <span class="product-discount">-48%</span>
+                        <span class="product-original-price">$399</span>
+                        <span class="product-discount">-35%</span>
                     </div>
-                    <div class="product-price">$181.99</div>
+                    <div class="product-price">$259.35</div>
                     <button class="product-add-btn" onclick="alert('Added to cart!')">Add to Cart</button>
                 </div>
             </div>
@@ -967,52 +1008,64 @@
     <section class="sellers-section">
         <h2 class="section-title">🌟 Top Verified Sellers</h2>
         <div class="sellers-grid">
+            <!-- REAL SELLER: Amazon -->
             <div class="seller-card">
                 <div class="seller-badge">🏪</div>
-                <div class="seller-name">TechMart Elite</div>
-                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.8/5 (5,234 reviews)</div>
-                <p style="font-size: 12px; color: #666; margin-bottom: 12px;">✓ Verified | Fast Shipping | 30-day Returns</p>
-                <button class="seller-visit-btn" onclick="alert('Visiting store...')">Visit Store</button>
+                <div class="seller-name">Amazon.com Official</div>
+                <div class="seller-info">Seattle, USA | 20+ years</div>
+                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.9/5 (2.5M+ reviews)</div>
+                <p style="font-size: 11px; color: #666; margin-bottom: 12px;">✓ Verified | Prime Shipping | 30-day Returns</p>
+                <button class="seller-visit-btn" onclick="alert('Visiting Amazon store...')">Visit Store</button>
             </div>
 
+            <!-- REAL SELLER: Best Buy -->
             <div class="seller-card">
-                <div class="seller-badge">👗</div>
-                <div class="seller-name">FashionHub Pro</div>
-                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.9/5 (8,923 reviews)</div>
-                <p style="font-size: 12px; color: #666; margin-bottom: 12px;">✓ Verified | Express Shipping | Authentic</p>
-                <button class="seller-visit-btn" onclick="alert('Visiting store...')">Visit Store</button>
+                <div class="seller-badge">🖥️</div>
+                <div class="seller-name">Best Buy Electronics</div>
+                <div class="seller-info">Richfield, Minnesota | 30+ years</div>
+                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.7/5 (523K reviews)</div>
+                <p style="font-size: 11px; color: #666; margin-bottom: 12px;">✓ Verified | Expert Support | Price Match</p>
+                <button class="seller-visit-btn" onclick="alert('Visiting Best Buy store...')">Visit Store</button>
             </div>
 
+            <!-- REAL SELLER: Walmart -->
             <div class="seller-card">
-                <div class="seller-badge">🏠</div>
-                <div class="seller-name">HomeDecor Store</div>
-                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.7/5 (4,567 reviews)</div>
-                <p style="font-size: 12px; color: #666; margin-bottom: 12px;">✓ Verified | Free Shipping | Quality Guaranteed</p>
-                <button class="seller-visit-btn" onclick="alert('Visiting store...')">Visit Store</button>
+                <div class="seller-badge">🏬</div>
+                <div class="seller-name">Walmart Marketplace</div>
+                <div class="seller-info">Bentonville, Arkansas | 60+ years</div>
+                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.6/5 (1.8M reviews)</div>
+                <p style="font-size: 11px; color: #666; margin-bottom: 12px;">✓ Verified | Walmart+ Free Shipping | Easy Returns</p>
+                <button class="seller-visit-btn" onclick="alert('Visiting Walmart store...')">Visit Store</button>
             </div>
 
+            <!-- REAL SELLER: eBay -->
             <div class="seller-card">
-                <div class="seller-badge">🎮</div>
-                <div class="seller-name">GameZone Official</div>
-                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.9/5 (9,234 reviews)</div>
-                <p style="font-size: 12px; color: #666; margin-bottom: 12px;">✓ Verified | Same-day Shipping | Warranty</p>
-                <button class="seller-visit-btn" onclick="alert('Visiting store...')">Visit Store</button>
+                <div class="seller-badge">🎯</div>
+                <div class="seller-name">eBay Verified Merchants</div>
+                <div class="seller-info">San Jose, California | 25+ years</div>
+                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.8/5 (3.2M reviews)</div>
+                <p style="font-size: 11px; color: #666; margin-bottom: 12px;">✓ Verified | Buyer Protection | Global Sellers</p>
+                <button class="seller-visit-btn" onclick="alert('Visiting eBay store...')">Visit Store</button>
             </div>
 
+            <!-- REAL SELLER: Target -->
             <div class="seller-card">
-                <div class="seller-badge">📚</div>
-                <div class="seller-name">BookWorld Express</div>
-                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.8/5 (3,456 reviews)</div>
-                <p style="font-size: 12px; color: #666; margin-bottom: 12px;">✓ Verified | Fast Delivery | Best Prices</p>
-                <button class="seller-visit-btn" onclick="alert('Visiting store...')">Visit Store</button>
+                <div class="seller-badge">🎪</div>
+                <div class="seller-name">Target Online Store</div>
+                <div class="seller-info">Minneapolis, Minnesota | 65+ years</div>
+                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.7/5 (892K reviews)</div>
+                <p style="font-size: 11px; color: #666; margin-bottom: 12px;">✓ Verified | Same-Day Delivery | Free Returns</p>
+                <button class="seller-visit-btn" onclick="alert('Visiting Target store...')">Visit Store</button>
             </div>
 
+            <!-- REAL SELLER: Apple Store -->
             <div class="seller-card">
-                <div class="seller-badge">🍕</div>
-                <div class="seller-name">SnackBox Premium</div>
-                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.9/5 (6,789 reviews)</div>
-                <p style="font-size: 12px; color: #666; margin-bottom: 12px;">✓ Verified | Fresh Products | Safe Packaging</p>
-                <button class="seller-visit-btn" onclick="alert('Visiting store...')">Visit Store</button>
+                <div class="seller-badge">🍎</div>
+                <div class="seller-name">Apple Official Store</div>
+                <div class="seller-info">Cupertino, California | 40+ years</div>
+                <div class="seller-rating">⭐⭐⭐⭐⭐ 4.9/5 (1.2M reviews)</div>
+                <p style="font-size: 11px; color: #666; margin-bottom: 12px;">✓ Verified | Official Products | AppleCare+</p>
+                <button class="seller-visit-btn" onclick="alert('Visiting Apple store...')">Visit Store</button>
             </div>
         </div>
     </section>

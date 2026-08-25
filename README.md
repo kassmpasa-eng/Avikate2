@@ -18,7 +18,18 @@
             color: #102a5c;
             background: #ffffff;
         }
+<nav>
+    <div class="logo">
+        <img src="avikate-logo.png" alt="Avikate Logo">
+    </div>
 
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
         /* ===== LOGO ===== */
         .logo {
             display: flex;
@@ -27,7 +38,29 @@
             text-decoration: none;
             color: #123b86;
         }
+nav {
+    background: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.logo img {
+    width: 180px;
+    height: auto;
+}
+
+.nav-links a {
+    color: #0a2e6b;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
         .logo-mark {
             font-size: 48px;
             font-weight: 900;

@@ -40,7 +40,10 @@
       border-radius: 8px;
       font-size: 16px;
     }
-    #message { text-align: center; margin-top: 15px; }
+    #message { text-align: center; margin-top: 12px; color: #333; }
+    #debug { font-size: 12px; color: #666; margin-top: 8px; white-space: pre-wrap; }
+    .hint { font-size: 13px; color: #555; text-align: center; }
+    .warning { color: #b45309; }
   </style>
 </head>
 <body>
@@ -50,21 +53,50 @@
     <input type="password" id="password" placeholder="Password" autocomplete="new-password">
     <button id="registerBtn">Create Account</button>
     <p id="message"></p>
+    <div id="debug" aria-hidden="true"></div>
+    <p class="hint">If you see a CORS or network error, follow the setup instructions in REGISTRATION_SETUP.md</p>
   </div>
 
   <!-- Use the UMD build of supabase-js -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 
   <script>
-    // TODO: replace these with your project's values (use the anon/public key, NOT a service_role key)
+    // IMPORTANT: replace these with your project's values (use the anon/public key, NOT a service_role key)
     const SUPABASE_URL = "YOUR_SUPABASE_URL"; // e.g. https://xyzabc.supabase.co
     const SUPABASE_KEY = "YOUR_SUPABASE_ANON_KEY";
+
+    const messageEl = document.getElementById('message');
+    const debugEl = document.getElementById('debug');
+    const registerBtn = document.getElementById('registerBtn');
 
     // Create the client from the global 'supabase' provided by the UMD bundle
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    const registerBtn = document.getElementById('registerBtn');
-    const messageEl = document.getElementById('message');
+    // Utility: show a short message to the user and verbose debug in console + debug panel
+    function showMessage(text, isError = false) {
+      messageEl.textContent = text;
+      messageEl.className = isError ? 'warning' : '';
+      console.log(text);
+    }
+    function appendDebug(obj) {
+      try {
+        debugEl.textContent = typeof obj === 'string' ? debugEl.textContent + '\n' + obj : debugEl.textContent + '\n' + JSON.stringify(obj, null, 2);
+      } catch (e) {
+        debugEl.textContent = debugEl.textContent + '\n' + String(obj);
+      }
+    }
+
+    // Detect file:// serving (common cause of CORS/network problems when testing locally)
+    if (location.protocol === 'file:') {
+      showMessage('You are opening this page using file:// — this will likely block requests. Serve the page over http:// (see REGISTRATION_SETUP.md).', true);
+      appendDebug('Detected file:// protocol — stop and serve via HTTP.');
+    }
+
+    // Basic placeholder check to help catch forgotten TODOs
+    if (!SUPABASE_URL || SUPABASE_URL.includes('YOUR_') || !SUPABASE_KEY || SUPABASE_KEY.includes('YOUR_')) {
+      appendDebug('SUPABASE_URL or SUPABASE_KEY not set — replace the placeholders with your project values.');
+      showMessage('Configuration needed: replace SUPABASE_URL and SUPABASE_KEY at the top of this file (see REGISTRATION_SETUP.md).', true);
+    }
 
     registerBtn.addEventListener('click', register);
     // allow Enter to submit
@@ -77,8 +109,14 @@
       const password = document.getElementById('password').value;
 
       messageEl.textContent = '';
+      debugEl.textContent = '';
       if (!email || !password) {
-        messageEl.textContent = "Please enter your email and password.";
+        showMessage('Please enter your email and password.', true);
+        return;
+      }
+
+      if (!SUPABASE_URL || SUPABASE_URL.includes('YOUR_') || !SUPABASE_KEY || SUPABASE_KEY.includes('YOUR_')) {
+        showMessage('Missing Supabase configuration (SUPABASE_URL / SUPABASE_KEY). Update the top of this file.', true);
         return;
       }
 
@@ -86,23 +124,28 @@
       registerBtn.textContent = 'Creating...';
 
       try {
-        const { data, error } = await supabaseClient.auth.signUp({
-          email,
-          password
-        });
+        appendDebug({ action: 'calling signUp', email, url: SUPABASE_URL });
+        const { data, error } = await supabaseClient.auth.signUp({ email, password });
+        appendDebug({ data, error });
 
         if (error) {
+          // show helpful info to the user and console
           console.error('Supabase signUp error:', error);
-          messageEl.textContent = error.message || 'Signup failed';
+          appendDebug(error);
+          // error.message is usually safe; show it
+          showMessage(error.message || 'Signup failed — check console for details', true);
           return;
         }
 
         // success
         console.log('signUp data:', data);
-        messageEl.textContent = "Account created! Check your email to verify your account.";
+        appendDebug('signUp succeeded: ' + JSON.stringify(data));
+        showMessage('Account created! Check your email to verify your account.');
       } catch (err) {
+        // Generic/fetch-level errors end up here (network, CORS, etc.)
         console.error('Unexpected error:', err);
-        messageEl.textContent = err.message || 'An unexpected error occurred';
+        appendDebug(err);
+        showMessage('Unexpected error occurred — open DevTools Console/Network and check the request/response.', true);
       } finally {
         registerBtn.disabled = false;
         registerBtn.textContent = 'Create Account';

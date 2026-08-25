@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Avikate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .navbar h2 {
+            font-size: 24px;
+        }
+        .navbar button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .navbar button:hover {
+            background-color: #c0392b;
+        }
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .welcome-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        .welcome-section h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .welcome-section p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2>Avikate Dashboard</h2>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to Your Dashboard!</h1>
+            <p>You have successfully registered and logged in. This is the main section of the Avikate website where you can access all features and services.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>📊 Analytics</h3>
+                <p>Track your progress and view detailed analytics about your activity on the platform.</p>
+            </div>
+            <div class="feature-card">
+                <h3>👤 Profile</h3>
+                <p>Manage your profile information and customize your account settings.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚙️ Settings</h3>
+                <p>Configure your preferences and adjust notification settings to your liking.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Security</h3>
+                <p>Keep your account secure with advanced security features and options.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📞 Support</h3>
+                <p>Get help from our support team whenever you need assistance.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚀 Premium</h3>
+                <p>Upgrade to premium and unlock exclusive features and benefits.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            if (confirm("Are you sure you want to logout?")) {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>

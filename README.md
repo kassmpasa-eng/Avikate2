@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>Avikate | Build • Connect • Grow</title>
 
     <style>
@@ -17,11 +15,7 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #102a5c;
             background: #ffffff;
-        }
-<nav>
-    <div class="logo">
-        <img src="avikate-logo.png" alt="Avikate Logo">
-    </div>
+
 
     <div class="nav-links">
         <a href="#home">Home</a>
@@ -29,44 +23,6 @@
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </div>
-</nav>
-        /* ===== LOGO ===== */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: #123b86;
-        }
-nav {
-    background: white;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
-    width: 180px;
-    height: auto;
-}
-
-.nav-links a {
-    color: #0a2e6b;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    color: #00d4ff;
-}
-        .logo-mark {
-            font-size: 48px;
-            font-weight: 900;
-            font-style: italic;
-            color: #087cff;
-        }
 
         .logo-text {
             font-size: 25px;
@@ -108,20 +64,6 @@ nav {
 
         .nav-links a:hover {
             color: #087cff;
-        }
-<script>
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-}
-</script>
-
-</body>
-</html>
-        .start-btn {
-            background: #1268e8;
-            color: white !important;
-            padding: 13px 24px;
-            border-radius: 30px;
         }
 
         /* ===== HERO ===== */
@@ -410,21 +352,7 @@ function toggleMenu() {
 
     <!-- GET STARTED -->
     <a href="register.html" class="get-started">
-    Get Started
-</a>.get-started {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.get-started:hover {
-    background: #1d4ed8;
-}
+    Get Starter 
 
         <div>
             <h2>Join the Avikate Community</h2>
@@ -472,10 +400,6 @@ function toggleMenu() {
 
     </footer>
 
-</body>
-</html>
-@media (max-width: 768px) {
-
     nav {
         flex-direction: column;
         padding: 15px;
@@ -517,13 +441,7 @@ function toggleMenu() {
     }
 
     section {
-        padding: 30px 20px;
-    }
-}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!DOCTYPE html>
-<html>
-<head>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -533,6 +451,4 @@ function toggleMenu() {
         /* Your CSS here */
     </style>
 
-</head>
-const SUPABASE_URL = "YOUR_SUPABASE_URL";https://tyvlirculpxyesxpopsr.supabase.co
-const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";sb_publishable_RxJ3Hg5OINF8mHL_7299qQ_uXZL_WnX
+

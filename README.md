@@ -1,98 +1,421 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Avikate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avikate | Build • Connect • Grow</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f4f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #102a5c;
+            background: #ffffff;
         }
 
-        /* Navigation bar */
-        nav {
-            background: #2563eb;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
+        /* ===== LOGO ===== */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 17px;
+            color: #123b86;
+        }
+
+        .logo-mark {
+            font-size: 48px;
+            font-weight: 900;
+            font-style: italic;
+            color: #087cff;
+        }
+
+        .logo-text {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            display: block;
+            font-size: 8px;
+            letter-spacing: 3px;
+            color: #23416f;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 6%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #172b4d;
             font-weight: bold;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .nav-links a:hover {
+            color: #087cff;
         }
 
-        /* Welcome section */
+        .start-btn {
+            background: #1268e8;
+            color: white !important;
+            padding: 13px 24px;
+            border-radius: 30px;
+        }
+
+        /* ===== HERO ===== */
         .hero {
-            text-align: center;
-            padding: 70px 20px;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            color: white;
+            background: linear-gradient(120deg, #06235f, #005de8);
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .welcome {
+            color: #19c5ff;
+            font-weight: bold;
+            letter-spacing: 5px;
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 70px;
+            margin: 15px 0 5px;
+            letter-spacing: 3px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin: 0 0 20px;
         }
 
         .hero p {
             font-size: 18px;
-            color: #555;
+            line-height: 1.7;
         }
 
-        button {
-            background: #2563eb;
+        .hero-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 16px 35px;
+            background: #09b9ff;
             color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 60px 7%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .services-subtitle {
+            color: #52627a;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 1px solid #dce8f7;
+            background: #f8fbff;
+        }
+
+        .icon {
+            font-size: 42px;
+        }
+
+        .card h3 {
+            color: #102a5c;
+        }
+
+        .card p {
+            color: #58677d;
+            line-height: 1.5;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            padding: 35px 8%;
+            background: linear-gradient(90deg, #0864df, #0aaeff);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cta h2 {
+            margin: 0 0 5px;
+        }
+
+        .account-btn {
+            background: white;
+            color: #073d91;
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #031a43;
+            color: white;
+            padding: 45px 8% 20px;
+            text-align: center;
+        }
+
+        footer .logo {
+            justify-content: center;
+            color: white;
+        }
+
+        footer .tagline {
+            color: #cbd8ef;
+        }
+
+        .copyright {
+            margin-top: 35px;
+            border-top: 1px solid #29446f;
+            padding-top: 20px;
+            color: #b9c7dc;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 60px 7%;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#home" class="logo">
+            <span class="logo-mark">A</span>
+
+            <span>
+                <span class="logo-text">AVIKATE</span>
+                <span class="tagline">BUILD • CONNECT • GROW</span>
+            </span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#get-started" class="start-btn">Get Started</a>
+        </div>
+
     </nav>
 
-    <!-- Home -->
-    <section class="hero" id="home">
-        <h1>Welcome to Avikate</h1>
 
-        <p>
-            Build Your Future With Avikate.
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="welcome">WELCOME TO</div>
+
+            <h1>AVIKATE</h1>
+
+            <h2>Build Your Future With Avikate</h2>
+
+            <p>
+                Avikate is a platform designed to make things easier,
+                faster and better. We connect people, ideas and
+                opportunities in one place.
+            </p>
+
+            <a href="#get-started" class="hero-btn">
+                🚀 Get Started →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="services" id="about">
+
+        <h2>About Avikate</h2>
+
+        <p class="services-subtitle">
+            Building a better digital future.
         </p>
 
-        <button>Get Started</button>
+        <p>
+            Avikate is being built to connect people, ideas and
+            opportunities through one simple platform.
+        </p>
+
     </section>
 
-    <!-- About -->
-    <section id="about">
-        <h2>About Avikate</h2>
-        <p>Avikate is a platform designed to make things easier.</p>
-    </section>
 
-    <!-- Services -->
-    <section id="services">
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
         <h2>Our Services</h2>
-        <p>Our services will be available here.</p>
+
+        <p class="services-subtitle">
+            What you can expect from Avikate
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>Fast & Easy</h3>
+                <p>Simple and quick solutions for everyone.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👥</div>
+                <h3>Connect People</h3>
+                <p>Bringing people and ideas together.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💡</div>
+                <h3>New Opportunities</h3>
+                <p>Discover and create new opportunities.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>Safe & Reliable</h3>
+                <p>Your data and work are protected.</p>
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>You can contact Avikate here.</p>
+
+    <!-- GET STARTED -->
+    <section class="cta" id="get-started">
+
+        <div>
+            <h2>Join the Avikate Community</h2>
+            <p>Be part of the future. Start your journey today.</p>
+        </div>
+
+        <a href="#contact" class="account-btn">
+            Create Account →
+        </a>
+
     </section>
+
+
+    <!-- CONTACT -->
+    <section class="services" id="contact">
+
+        <h2>Contact Avikate</h2>
+
+        <p class="services-subtitle">
+            More contact features will be added here.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+
+            <span class="logo-mark">A</span>
+
+            <span>
+                <span class="logo-text">AVIKATE</span>
+                <span class="tagline">BUILD • CONNECT • GROW</span>
+            </span>
+
+        </div>
+
+        <p>Build • Connect • Grow</p>
+
+        <div class="copyright">
+            © 2026 Avikate. All rights reserved.
+        </div>
+
+    </footer>
 
 </body>
 </html>

@@ -109,7 +109,14 @@ nav {
         .nav-links a:hover {
             color: #087cff;
         }
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
 
+</body>
+</html>
         .start-btn {
             background: #1268e8;
             color: white !important;

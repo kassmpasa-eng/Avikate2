@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avikate</title>
+</head>
+
+<body>
+    <h1>Welcome to Avikate</h1>
+
+    <p>This is my first website.</p>
+
+    <button>Get Started</button>
+</body>
+</html>

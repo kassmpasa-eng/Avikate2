@@ -534,3 +534,5 @@ function toggleMenu() {
     </style>
 
 </head>
+const SUPABASE_URL = "YOUR_SUPABASE_URL";https://tyvlirculpxyesxpopsr.supabase.co
+const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";sb_publishable_RxJ3Hg5OINF8mHL_7299qQ_uXZL_WnX

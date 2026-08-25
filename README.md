@@ -452,3 +452,49 @@ nav {
 
 </body>
 </html>
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+}

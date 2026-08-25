@@ -498,3 +498,17 @@ nav {
         padding: 30px 20px;
     }
 }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avikate</title>
+
+    <style>
+        /* Your CSS here */
+    </style>
+
+</head>

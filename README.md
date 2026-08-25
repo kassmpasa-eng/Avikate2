@@ -409,7 +409,22 @@ function toggleMenu() {
 
 
     <!-- GET STARTED -->
-    <section class="cta" id="get-started">
+    <a href="register.html" class="get-started">
+    Get Started
+</a>.get-started {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.get-started:hover {
+    background: #1d4ed8;
+}
 
         <div>
             <h2>Join the Avikate Community</h2>
